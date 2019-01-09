@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>来中行，整点零花钱</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <script src="js/jquery-2.1.3.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/rem.js"></script>
+</head>
+<body>
+    <div class="fakeloader" >
+        <div class="spinner2">
+            <div class="spinner-container container1">
+                <div class="circle1"></div>
+                <div class="circle2"></div>
+                <div class="circle3"></div>
+                <div class="circle4"></div>
+            </div>
+            <div class="spinner-container container2">
+                <div class="circle1"></div>
+                <div class="circle2"></div>
+                <div class="circle3"></div>
+                <div class="circle4"></div>
+            </div>
+            <div class="spinner-container container3">
+                <div class="circle1"></div>
+                <div class="circle2"></div>
+                <div class="circle3"></div>
+                <div class="circle4"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="index">
+        <img src="img/index-bg.png" alt="" class="index-bg">
+        <!--倒计时-->
+        <p class="countdown"></p>
+        <!--红包-->
+        <div class="redBags">
+            <div class="redBag"></div>
+            <div class="redBag"></div>
+            <div class="redBag"></div>
+            <div class="redBag"></div>
+            <div class="redBag"></div>
+            <div class="redBag"></div>
+            <div class="redBag"></div>
+            <div class="redBag"></div>
+        </div>
+        <!--按钮-->
+        <div class="btns">
+            <div class="rule-btn"  onclick="$('.rules').show();"><a>活动锦囊</a></div>
+            <div class="shake-btn"><a>摇一摇</a></div>
+            <div class="record-btn" onclick="$('.prizeRecord').show();"><a>红包记录</a></div>
+        </div>
+        <!--填写电话号码-->
+        <div class="phoneSubmit mask win">
+            <section>
+                <form action="">
+                    <input type="text" class="phone" placeholder="请输入手机号（不可修改）">
+                    <input type="button" class="submitBtn" value="确定">
+                    <p>电话号码仅用于话费奖励充值</p>
+                </form>
+                <i class="close closePhone" onclick="$('.phoneSubmit').hide();"></i>
+            </section>
+        </div>
+        <!--活动锦囊-->
+        <div class="rules mask win">
+            <section>
+                <div>
+                    <h4>活动规则</h4>
+                    <div>
+                        <h3><span></span>活动时间</h3>
+                        <p style="padding-left: .3rem">2018.12.21-2018.12.26</p>
+                        <h3><span></span>活动详情</h3>
+                        <p>1、点击链接进入游戏，填写：姓名+手机号码。</p>
+                        <p>2、进入游戏页面可以查看到具体红包开抢时间。</p>
+                        <p>3、当达到开抢时间后，会有5秒倒计时，提示开抢后粉丝需要用力摇晃手机，抢红包。</p>
+                        <p>4、每轮时间段总时间为30分钟，每人每轮一次只能摇30秒，30秒内最多可中3个奖。</p>
+                        <p>5、每一轮粉丝均可参与活动，可查看抢奖时间，根据时间安排进入枪奖。</p>
+                        <p>6、活动期间奖品数量有限，先到先得，发完即止。</p>
+                        <p>7、中奖后，可在我的奖品中查看奖品。</p>
+                        <p>8、获得话费奖品，活动结束后5个工作日内，工作人员将话费充值到粉丝信息填写的电话号码中。</p>
+                        <p>9、获得现金红包，满1元即可在中奖页面自行领取。</p>
+                        <h3><span></span>活动奖品</h3>
+                        <p>特等奖：扫地机器人<span>1名</span></p>
+                        <p>一等奖：100京东券<span>10名</span></p>
+                        <p>二等奖：10元话费<span>50名</span></p>
+                        <p>三等奖：随机红包</p>
+                        <p style="padding-left: .3rem">0.1元<span>3000名</span></p>
+                        <p style="padding-left: .3rem">0.2元<span>1000名</span></p>
+                        <p style="padding-left: .3rem">0.6元<span>500名</span></p>
+                    </div>
+                </div>
+                <i class="close" onclick="$('.rules').hide()"></i>
+            </section>
+        </div>
+        <!--抽奖记录-->
+        <div class="prizeRecord mask win">
+            <section>
+                <div>
+                    <h4>抽奖记录</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>时间</th>
+                                <th>奖品</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2018.10.01</td>
+                                <td>谢谢参与</td>
+                            </tr>
+                            <tr>
+                                <td>2018.10.11</td>
+                                <td>11元话费</td>
+                            </tr>
+                            <tr>
+                                <td>2018.10.01</td>
+                                <td>1.11元现金红包</td>
+                            </tr>
+                            <tr>
+                                <td>2018.10.01</td>
+                                <td>1.11元现金红包</td>
+                            </tr>
+                            <tr>
+                                <td>2018.10.01</td>
+                                <td>1.11元现金红包</td>
+                            </tr>
+                            <tr>
+                                <td>2018.10.01</td>
+                                <td>1.11元现金红包</td>
+                            </tr>
+                            <tr>
+                                <td>2018.10.01</td>
+                                <td>1.11元现金红包</td>
+                            </tr>
+                            <tr>
+                                <td>2018.10.01</td>
+                                <td>1.11元现金红包</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="get-btn"><a>一键领取红包</a></div>
+                    <p>话费奖品，由工作人员进行充值。</p>
+                </div>
+                <i class="close" onclick="$('.prizeRecord').hide()"></i>
+            </section>
+        </div>
+        <!--未中奖弹窗-->
+        <div class="noPrize mask win">
+            <section>
+                <div>
+                    <p>分享好友可获取再抽奖机会</p>
+                    <a class="onceAgain" onclick="$('.noPrize').hide()">再抽一次</a>
+                </div>
+                <i class="close" onclick="$('.noPrize').hide()"></i>
+            </section>
+        </div>
+        <!--中奖弹窗-->
+        <div class="getPrize mask win">
+            <section>
+                <div>
+                    <p>恭喜您，中奖啦！</p>
+                    <p><b>1.11</b>元<br>现金红包</p>
+                    <a>收下红包</a>
+                </div>
+                <i class="close" onclick="$('.getPrize').hide()"></i>
+            </section>
+        </div>
+    </div>
+</body>
+<script>
+    //倒计时
+    var stop,now,hour,day,minutes,second,seconds,p = $(".countdown"),timer = null;
+    var phoneboolean = false;//是否填写电话号码，避免在为填写之前或输入框在时触发抽奖
+    function countDown(){
+        stop = new Date("2019/1/1,23:23:59");
+        now = new Date();
+        seconds = parseInt((stop.getTime()-now.getTime())/1000);//剩余秒数
+        day = parseInt(seconds/60/60/24);
+        hour = parseInt(seconds/3600%24);
+        minutes = parseInt((seconds/60)%60);
+        second = parseInt(seconds%60);
+        if(second <10 ){
+            second = "0"+second
+        }
+        p.html("<b>"+day+"</b>天<b>"+hour+"</b>小时<b>"+minutes+"</b>分<b>"+second+"</b>秒");
+        if(seconds > 0){
+            timer = setInterval(function(){
+                if(seconds > 0){
+                    seconds -=1;
+                    if(second > 0){
+                        second-=1;
+                        if(second <10 ){
+                            second = "0"+second
+                        }
+                    }else {
+                        second = 59;
+                        if(minutes > 0){
+                            minutes-=1;
+                        }else {
+                            minutes = 59;
+                            if(hour > 0){
+                                hour -= 1;
+                            }else {
+                                hour = 0;
+                            }
+                        }
+                    }
+                    p.html("<b>"+day+"</b>天<b>"+hour+"</b>小时<b>"+minutes+"</b>分<b>"+second+"</b>秒");
+                }else {
+                    p.html("活动已结束！");
+                    clearInterval(timer);
+                }
+            },1000);
+        }else {
+            p.html("活动已结束！");
+            clearInterval(timer);
+        }
+    }
+    countDown();
+    //        验证手机号
+    var regPhone = /^1[356789][\d]{9}$/,phone = $(".phone"),flag = false;
+    phone.focus(function(){
+        $(this).removeClass("wrong");
+    }).blur(function(){
+        window.scroll(0,0);
+        if(!regPhone.test(phone.val())){
+            $(this).val("").attr("placeholder","请输入正确的手机号").addClass("wrong");
+            return false;
+        }
+        else {
+            flag = true;
+        }
+    });
+    //        提交电话
+    $(".submitBtn").click(function(){
+        phone.blur();
+        // 电话号码正确
+        if(flag){
+            phoneboolean = true;
+            $(".phoneSubmit").hide();
+        }
+    });
+    $(".closePhone").click(function(){phoneboolean = true;});
+    //        抽奖
+    function prize(){
+        $(".redBag").addClass("shark");
+        setTimeout(function () {
+            $(".redBag").removeClass("shark");
+//                $(".getPrize").show().addClass("scale");//中奖
+            $(".noPrize").show().addClass("scale");//未中奖
+            sharkOrNO = true;//奖品显示结束后可继续倾斜监听
+        },1000)
+    }
+    $(".shake-btn,.onceAgain").click(function(){
+        prize()
+    });
+    var shakeThreshold = 1000; // 定义一个摇动的阈值
+    var lastUpdate = 0; // 记录上一次摇动的时间
+    var x, y, z, lastX, lastY, lastZ; // 定义x、y、z记录三个轴的数据以及上一次触发的数据
+    var sharkOrNO =  true;//摇一摇触发，倾斜监听暂停
+
+    // 监听传感器运动事件
+    if (window.DeviceMotionEvent) {
+        window.addEventListener('devicemotion', deviceMotionHandler, false);
+    } else {
+        alert('天呐，你的手机竟然还不支持摇一摇ヾ(◍°∇°◍)ﾉﾞ，你也可以点击下方的“摇一摇按钮参与抢红包”');
+    }
+    // 运动传感器处理
+    function deviceMotionHandler(eventData) {
+        if(phoneboolean){
+            var acceleration = eventData.accelerationIncludingGravity; // 获取含重力的加速度
+            var curTime = new Date().getTime();
+            // 100毫秒进行一次位置判断
+            if ((curTime - lastUpdate) > 100) {
+                var diffTime = curTime - lastUpdate;
+                lastUpdate = curTime;
+                x = acceleration.x;
+                y = acceleration.y;
+                z = acceleration.z;
+                var speed = Math.abs(x + y + z - lastX - lastY - lastZ) / diffTime * 10000;
+                if (speed > shakeThreshold) {
+                    sharkOrNO = false;
+                    //摇一摇触发
+                    prize();
+                }
+                lastX = x;
+                lastY = y;
+                lastZ = z;
+            }
+        }
+    }
+    //手机倾斜监听
+    if(window.DeviceOrientationEvent){
+        window.addEventListener('deviceorientation',DeviceOrientationHandler,false);
+    }
+    function DeviceOrientationHandler(event){
+        var alpha = event.alpha,
+                beta = event.beta,
+                gamma = event.gamma;
+        if(alpha != null || beta != null || gamma != null){
+            if(Math.abs(gamma)<45 && sharkOrNO){
+                $(".redBag").css("transform","rotateZ("+-gamma+"deg) translate(-7px, 1px)");
+            }
+        }
+    }
+
+    //监听加载状态改变
+    document.onreadystatechange = completeLoading;
+    //加载状态为complete时移除loading效果
+    function completeLoading() {
+        if (document.readyState == "complete") {
+            $('.fakeloader').hide();
+        }
+    }
+</script>
+</html>
